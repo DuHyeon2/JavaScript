@@ -1,1 +1,1 @@
-# JavaScript-
+# 모던 자바스크립트 교재를 통한 JavaScript 공부
