@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang=ko>
+<head>
+    <meta charset="UTF-8">
+    <title>잘못된 클로저</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var elm = document.getElementsByTagName('input')
+            for(var i = 0; i < elm.length; i++){
+                elm[i].onclick = function(){
+                    console.log(i)
+                }
+            }
+        }
+    </script>
+
+    <input type="button" value="0">
+    <input type="button" value="1">
+    <input type="button" value="2">
+</body>
+
+
+</html>

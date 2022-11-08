@@ -35,3 +35,59 @@ function multiply(a,b){
 }
 console.log(multiply(2,3))
 console.log(multiply(2))
+
+
+
+var tom = {
+    name : 'Tom',
+    sayHello : function(){
+        console.log('Hello' + this.name)
+    }
+}
+
+tom.sayHello()
+
+var huck = {name : 'Huck'}
+huck.sayHello = tom.sayHello
+huck.sayHello()
+
+var a = 'A'
+function f(){
+    var b = 'B'
+    function g(){
+        var c = 'C'
+        console.log(a + b + c)
+    }
+    g()
+}
+f()
+
+
+function makeCounter(){
+    var count = 0
+    return f
+    function f(){
+        return count++
+    }
+}
+var counter = makeCounter()
+console.log(counter())
+console.log(counter())
+console.log(counter())
+
+
+
+function Person(name, age){
+    var _name = name
+    var _age = age
+    return {
+        getName : function() {return _name},
+        getAge : function() {return _age},
+        setAge : function(x) {_age = x}
+    }
+}
+var person = Person('Tom', 18)
+console.log(person.getName())
+console.log(person.getAge())
+person.setAge(19)
+console.log(person.getAge())
