@@ -14,6 +14,8 @@ console.log(square_3(2))
 var square_4 = x => x*x
 console.log(square_4(2))
 
+
+/* 예제 8-1 */
 function norm(x){
     var sum2 = sumSquare()
     return Math.sqrt(sum2)
@@ -28,6 +30,31 @@ function norm(x){
 var a = [2,1,3,5,7]
 var n = norm(a)
 console.log(n)
+
+
+/* 예제 8-2 */
+function myConcat(separator){
+    var s = ''
+    for(var i = 1; i < arguments.length; i++){
+        s += arguments[i]
+        if(i<arguments.length-1){
+            s += separator
+        }
+    }
+    return s
+}
+console.log(myConcat('/', 'apple', 'orange', 'peach'))
+
+
+/* 예제 8-3 */
+function fact(n){
+    if (n <= 1){
+        return 1
+    }
+    return n*fact(n-1)
+}
+fact(5)
+
 
 function multiply(a,b){
     b= b||1
@@ -91,3 +118,4 @@ console.log(person.getName())
 console.log(person.getAge())
 person.setAge(19)
 console.log(person.getAge())
+

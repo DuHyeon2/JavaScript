@@ -61,6 +61,7 @@ var obj_3 = new F()
 console.log(obj_3 instanceof F)
 console.log(obj_3 instanceof Object)
 console.log(obj_3 instanceof Date)
+console.log(obj_3 instanceof Number)
 /* ---------------------- */
 
 
