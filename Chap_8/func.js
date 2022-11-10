@@ -1,18 +1,18 @@
-console.log(square(2))
-function square(x){
-    return x*x
-}
+// console.log(square(2))
+// function square(x){
+//     return x*x
+// }
 
-var square_2 = function(x){
-    return x*x
-}
-console.log(square_2(2))
+// var square_2 = function(x){
+//     return x*x
+// }
+// console.log(square_2(2))
 
-var square_3 = new Function('x', 'return x*x')
-console.log(square_3(2))
+// var square_3 = new Function('x', 'return x*x')
+// console.log(square_3(2))
 
-var square_4 = x => x*x
-console.log(square_4(2))
+// var square_4 = x => x*x
+// console.log(square_4(2))
 
 
 /* 예제 8-1 */
@@ -71,7 +71,6 @@ var tom = {
         console.log('Hello' + this.name)
     }
 }
-
 tom.sayHello()
 
 var huck = {name : 'Huck'}
@@ -83,7 +82,7 @@ function f(){
     var b = 'B'
     function g(){
         var c = 'C'
-        console.log(a + b + c)
+        console.log(a+b+c)
     }
     g()
 }
@@ -118,4 +117,3 @@ console.log(person.getName())
 console.log(person.getAge())
 person.setAge(19)
 console.log(person.getAge())
-
