@@ -29,6 +29,7 @@ function norm(x){
 }
 var a = [2,1,3,5,7]
 var n = norm(a)
+console.log('예제 8-1')
 console.log(n)
 
 
@@ -43,6 +44,7 @@ function myConcat(separator){
     }
     return s
 }
+console.log('예제 8-2')
 console.log(myConcat('/', 'apple', 'orange', 'peach'))
 
 
@@ -53,6 +55,7 @@ function fact(n){
     }
     return n*fact(n-1)
 }
+console.log('예제 8-3')
 fact(5)
 
 
@@ -88,7 +91,7 @@ function f(){
 }
 f()
 
-
+/* 예제 8-6 */
 function makeCounter(){
     var count = 0
     return f
@@ -97,12 +100,15 @@ function makeCounter(){
     }
 }
 var counter = makeCounter()
+console.log('예제 8-6')
 console.log(counter())
 console.log(counter())
 console.log(counter())
 
 
 
+
+/* 예제 8-8 */
 function Person(name, age){
     var _name = name
     var _age = age
@@ -117,3 +123,16 @@ console.log(person.getName())
 console.log(person.getAge())
 person.setAge(19)
 console.log(person.getAge())
+
+
+/* 예제 8-8 */
+function makeMultiplier(x){
+    return function(y){
+        return x*y
+    }
+}
+var multi2 = makeMultiplier(2)
+var multi10 = makeMultiplier(10)
+console.log('예제 8-8')
+console.log(multi2(3))
+console.log(multi10(3))
