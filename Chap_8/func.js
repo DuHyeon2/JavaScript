@@ -136,3 +136,31 @@ var multi10 = makeMultiplier(10)
 console.log('예제 8-8')
 console.log(multi2(3))
 console.log(multi10(3))
+
+
+var myApp = myApp || {}
+myApp.test = 'test123'
+console.log(myApp.test)
+
+
+/* 예제 8-12 */
+
+var Module = Module || {};
+
+(function(_Module) {
+    var name = "NoName"
+
+    function getName(){
+        return name
+    }
+
+    _Module.showName = function(){
+        console.log(getName())
+    }
+
+    _Module.setName = function(x){
+        name = x
+    }
+})(Module);
+// Module.setName('TOM')
+Module.showName()
