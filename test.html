@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax회원가입</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").keyup(function(){  
+                $.ajax(
+                    {
+                        url:"demo.json",
+                        dataType:"json",
+                        success:function(data){
+                            $("#div2").empty();
+                            $.each(data, function(index){
+                                 if($("#id").val()== data[index].id){
+                                    $("#div2").append("아이디가 중복되었습니다.");
+                                 }
+                            });
+                         }
+                    }
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h3>아이디</h3>
+        <span><input type="text" id="id"><br></span>
+    </div>
+    <div id="div2"></div>
+</body>
+</html>
