@@ -120,3 +120,15 @@ Object.defineProperty(person, 'sayHi', {enumerable : false})
 for(var i in person){
     console.log(i)
 }
+
+var test1 = {
+    name : 'duhyeon',
+    sayHello : function(){
+        console.log("Hi, I'm " + this.name)
+    }
+};
+
+var test2 = Object.create(test1)
+test2.name = 'Kim'
+test2.sayHello()
+
