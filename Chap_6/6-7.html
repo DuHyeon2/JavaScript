@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-7</title>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            var img = new Image();
+            img.onload = function(){
+                ctx.drawImage(img,0,0);
+            };
+            img.src = "./test_image.jpg";
+        };
+    </script>
+</head>
+<body>
+    <canvas id = "mycanvas" width="1080" height="720">
+    </canvas>
+</body>
+
+</html>

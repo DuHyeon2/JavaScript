@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-2</title>
+    <script>
+        function displayTime(){
+            var d = new Date();
+            console.log("현재 시각" + d.toLocaleString());
+        }
+
+        window.onload = function(){
+            var button = document.getElementById("button");
+            button.onclick = displayTime;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click" id="button">
+</body>
+
+</html>
