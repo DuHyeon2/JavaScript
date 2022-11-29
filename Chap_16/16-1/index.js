@@ -7,6 +7,6 @@ window.onload = function(){
             }
         }
     }
-    req.open('GET', 'data.txt')
-    req.send(null)
+    req.open('GET', 'data.json', true);
+    req.send(null);
 }
